@@ -1,0 +1,66 @@
+Assalamualaikum,
+
+Berikut adalah Tugas Besar KI untuk kelompok Anda
+
+Level 1 — Baseline Machine Learning
+Kerjakan implementasi sistem autentikasi behavioral biometrics menggunakan Balabit Mouse Dynamics Dataset (https://github.com/balabit/Mouse-Dynamics-Challenge) dengan metode Deep Learning CNN-LSTM berbasis PyTorch untuk klasifikasi pola pergerakan mouse. Lakukan preprocessing data, pembagian train-test, pelatihan model, dan evaluasi menggunakan accuracy, precision, recall, F1-score, ROC-AUC, dan confusion matrix.
+Level 2 — Differential Privacy
+Terapkan Differential Privacy menggunakan Opacus dengan metode DP-SGD pada model baseline untuk melindungi data perilaku pengguna dari behavioral fingerprinting dan re-identification. Evaluasi tambahan meliputi privacy budget epsilon (ε), convergence loss, dan penurunan performa model.
+Level 3 — Federated Learning
+Terapkan Federated Learning menggunakan Flower (flwr) dengan metode FedAvg untuk mensimulasikan training terdistribusi pada beberapa client tanpa memindahkan data mentah ke server pusat. Evaluasi tambahan meliputi communication efficiency FL, communication rounds, convergence loss, dan performa global model.
+Level 4 — Federated Learning + Differential Privacy
+Gabungkan Federated Learning + Differential Privacy dengan menerapkan DP-SGD pada local training client sebelum model di-aggregate menggunakan FedAvg. Evaluasi menggunakan accuracy, precision, recall, F1-score, ROC-AUC, epsilon (ε), convergence loss, dan communication efficiency.
+Level 5 — Privacy Attack Evaluation
+Implementasikan Membership Inference Attack (MIA) untuk menguji apakah sampel tertentu termasuk dalam data training model. Selain itu, evaluasi juga kemungkinan gradient leakage attack pada skenario federated learning. Ukur attack accuracy dan analisis seberapa besar DP dan FL menurunkan risiko kebocoran data.
+Level 6 — Analisis Perbandingan dan Kesimpulan
+Bandingkan hasil dari baseline, DP, FL, dan FL+DP secara sistematis berdasarkan utility vs privacy trade-off. Analisis kemungkinan serangan seperti behavioral fingerprinting, re-identification attack, gradient leakage attack, dan membership inference attack.
+Level 7 — Non-IID Federated Learning
+Simulasikan kondisi non-IID data distribution pada Federated Learning dimana distribusi pola mouse tiap client berbeda untuk merepresentasikan kondisi dunia nyata pada behavioral biometrics. Evaluasi pengaruh non-IID terhadap:
+• global accuracy,
+• convergence stability,
+• client drift,
+• communication rounds,
+• dan fairness antar client.
+Analisis bagaimana heterogenitas data mempengaruhi performa Federated Learning dan efektivitas Differential Privacy.
+Level 8 — Ablation Study dan Privacy-Utility Trade-off
+Lakukan ablation study terhadap parameter yang paling relevan pada DP dan FL yaitu:
+• noise multiplier,
+• clipping norm,
+• jumlah client,
+• local epoch,
+• communication rounds,
+• dan privacy budget epsilon (ε).
+Visualisasikan:
+• accuracy vs epsilon,
+• F1-score vs epsilon,
+• communication cost vs accuracy,
+• dan convergence loss comparison.
+Analisis trade-off antara:
+• utility,
+• privacy,
+• stabilitas training,
+• dan efisiensi komunikasi.
+Level 9 — Advanced Leakage Attack menggunakan DLG
+Implementasikan Deep Leakage from Gradients (DLG) untuk mengevaluasi kemungkinan rekonstruksi pola pergerakan mouse pengguna dari gradient model pada Federated Learning. Evaluasi:
+• reconstruction similarity,
+• leakage success rate,
+• dan pengaruh Differential Privacy dalam mengurangi kebocoran gradient.
+Bandingkan hasil:
+• FL tanpa DP
+• dan FL + DP terhadap tingkat keberhasilan DLG attack.
+Level 10 — Explainability dan Threat Modeling
+Terapkan SHAP (SHapley Additive exPlanations) untuk mengidentifikasi fitur pola mouse yang paling mempengaruhi keputusan autentikasi model CNN-LSTM. Analisis fitur behavioral biometrics yang paling sensitif terhadap privasi.
+Selain itu, buat threat model analysis yang menjelaskan:
+• honest-but-curious server,
+• malicious client,
+• external attacker,
+• insider attack,
+• gradient leakage risk,
+• dan membership inference risk
+pada skenario baseline ML, DP, FL, dan FL+DP.
+
+Seluruh implementasi, eksperimen, evaluasi, visualisasi, analisis, dan pembahasan wajib dikumpulkan dalam bentuk:
+• laporan penelitian .docx
+• video penjelasan .mp4
+• dan artefak implementasi .ipynb
+pada drive yang disediakan (deadline 30 Mei 2026)
